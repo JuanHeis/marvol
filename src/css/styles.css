@@ -1,0 +1,108 @@
+body, html{
+    margin: 0;
+    padding: 0;
+}
+a:hover{
+    color: inherit;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+:root{
+    font-family: 'Roboto Condensed', sans-serif;
+    --caption: 12px;
+    --black: #202020;
+    --red: #E42831;
+    --grey: #929292;
+    --grey-border: #BBBBBB;
+    --body: 14px;
+}
+.button--header{
+    background-color: var(--black);
+    border-inline: 1px solid var(--grey-border);
+    border-block: 1px solid var(--black);
+    color: white;
+    font-size: var(--caption);
+    font-weight: bold;
+    padding-inline: 16.5px;
+}
+header{
+    background-color: var(--black);
+}
+.wrapper{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.header__logo{
+    display: flex;
+    justify-content: space-between;
+}
+nav {
+    border-block: 1px solid var(--grey-border);
+    display: block;
+    padding-block: 8px;
+}
+nav ul{
+    max-width: 759px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+nav ul li {
+    color: white;
+    display: inline-block;
+    list-style: none;
+    font-size: var(--caption);
+    font-weight: bold;
+    text-transform: uppercase;
+    height: 24px;
+    line-height: 24px;
+    vertical-align: middle;
+}
+nav ul li:hover{
+    color: red;
+}
+
+
+/* HERO */
+
+.hero{
+    clip-path: polygon(0 0, 100% 0, 100% 543px, 0% 100%);
+    background-image: url("../resources/img/hero-back.png");
+    height: 588px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    position: relative;
+    
+}
+.hero__nav{
+    position: relative;
+    bottom: 50px;
+    height: 68px;
+}
+.hero__nav .hero__nav-container{
+    max-width: 1200px;
+    display: block;
+    margin: auto;
+}
+
+.hero__nav ul li{
+    display: inline-block;
+   padding-inline: 24px;
+   padding-block: 20px;
+   font-size: var(--body);
+   font-weight: bold;
+   color: var(--red);
+
+}
+.hero__nav ul{
+    padding: 0;
+    display: inline-block;
+    /* border-top: var(--red) solid 4px; */
+    margin: 0;
+    height: 68px;
+    background-color: white;
+} 
