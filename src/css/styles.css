@@ -17,6 +17,19 @@ a{
     --grey: #929292;
     --grey-border: #BBBBBB;
     --body: 14px;
+    --button: 14px;
+    --body-regular: 16px;
+    --headline: 40px;
+}
+.button--secondary{
+    padding-block: 16px;
+    padding-inline: 32px;
+    border: 1px solid white;
+    text-transform: uppercase;
+    color: white;
+    background-color: var(--black);
+    font-size: var(--button);
+    font-weight: bold;
 }
 .button--header{
     background-color: var(--black);
@@ -32,6 +45,10 @@ header{
 }
 .wrapper{
     max-width: 1200px;
+    margin: 0 auto;
+}
+.wrapper__announcement{
+    max-width: auto;
     margin: 0 auto;
 }
 .header__logo{
@@ -95,8 +112,12 @@ nav ul li:hover{
    padding-block: 20px;
    font-size: var(--body);
    font-weight: bold;
-   color: var(--red);
-
+   
+}
+.hero__nav ul li:hover{
+    cursor: pointer;  
+    /* border-block-start: 4px solid var(--red); */
+    color: var(--red);
 }
 .hero__nav ul{
     padding: 0;
@@ -106,3 +127,68 @@ nav ul li:hover{
     height: 68px;
     background-color: white;
 } 
+
+
+/* announcement */
+.announcement{
+    height: 750px;
+}
+.announcement__background{
+    clip-path: polygon(0 0, 100% 0, 100% 543px, 0% 100%);
+    background-image: url("../resources/img/first-announcement.png");
+    height: 568px;
+    background-color: var(--black);
+    background-repeat: no-repeat;
+    background-position-x: right;
+}
+.announcement__info{
+    
+    clip-path: polygon(0 0, 80% 0%, 100% 100%, 0% 100%);
+    background-color: var(--black);
+    display: inline-block;
+    width: 75%;
+    height: 568px;
+    color: white;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid red;
+    
+}
+.announcement__info h2{
+    font-size: var(--headline);
+    font-weight: bold;
+}
+.announcement__info-width{
+    max-width: 404px;
+}
+.announcement__info p{
+    font-weight: 400;
+    font-size: var(--body-regular);
+}
+.announcement__list {
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    bottom: 105px;
+}
+.announcement__list{
+    padding-inline: 26px;
+    padding-block: 24px;
+    background-color: white;
+}
+.announcement__list li{
+    background-color: white;
+    list-style: none;
+    max-width: 269px;
+}
+
+.announcement__list li h4{
+    margin: 0px;
+    margin-block-start: 16px;
+}
+.announcement__list li p{
+    margin: 0px;
+}
