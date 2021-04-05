@@ -11,8 +11,18 @@ a {
     text-decoration: none;
     color: inherit;
 }
+
+.button--secondary:hover{
+    cursor: pointer;
+    border-color: var(--grey);
+}
+.button--primary:hover{
+    cursor: pointer;
+    background-color: #B20B13;
+}
 .button--primary {
-    background-color: #b20b13;
+    transition: 0.2s ease-in-out;
+    background-color: var(--red);
     border: 0px;
     padding-block: 16px;
     padding-inline: 32px;
@@ -35,6 +45,8 @@ a {
     --subtitle: 26px;
 }
 .button--secondary {
+    
+    transition: 0.2s ease-in-out;
     padding-block: 16px;
     padding-inline: 32px;
     border: 1px solid white;
@@ -57,7 +69,18 @@ a {
 header {
     background-color: var(--black);
 }
-
+.hero__info h2{
+    margin-block-start: 24px;
+    margin-block-end: 8px;
+    font-size: var(--headline);
+}
+.hero__info p{
+    max-width: 571px;
+    font-size: var(--body-regular);
+    font-weight: normal;
+    margin-block-end: 24px;
+    margin-block-start: 8px;
+}
 .wrapper {
     max-width: 1200px;
     margin: 0 auto;
@@ -73,7 +96,7 @@ header {
 nav {
     border-block: 1px solid var(--grey-border);
     display: block;
-    padding-block: 8px;
+    
 }
 nav ul {
     max-width: 759px;
@@ -81,7 +104,12 @@ nav ul {
     display: flex;
     justify-content: space-between;
 }
+nav ul li:hover{
+    border-block-end: 4px solid var(--red);
+    padding-block-end: 4px;
+}
 nav ul li {
+    padding-block: 8px;
     color: white;
     display: inline-block;
     list-style: none;
@@ -97,7 +125,16 @@ nav ul li:hover {
 }
 
 /* HERO */
-
+.hero__info{
+    margin: auto;
+    max-width: 1200px;
+    width: 100%;
+}
+.hero__background{
+   height: 100%;
+   display: flex;
+   align-content: center;
+}
 .hero {
     clip-path: polygon(0 0, 100% 0, 100% 543px, 0% 100%);
     background-image: url("../resources/img/hero-back.png");
@@ -106,6 +143,7 @@ nav ul li:hover {
     background-size: cover;
     background-repeat: no-repeat;
     color: white;
+   
     position: relative;
 }
 .hero__nav {
@@ -114,9 +152,17 @@ nav ul li:hover {
     height: 68px;
 }
 .hero__nav .hero__nav-container {
+
     max-width: 1200px;
     display: block;
     margin: auto;
+}
+.hero__nav ul li:hover{
+    border-top: 4px solid var(--red);
+    padding-block-start: 16px;
+    cursor: pointer;
+    /* border-block-start: 4px solid var(--red); */
+    color: var(--red);
 }
 
 .hero__nav ul li {
@@ -126,11 +172,7 @@ nav ul li:hover {
     font-size: var(--body);
     font-weight: bold;
 }
-.hero__nav ul li:hover {
-    cursor: pointer;
-    /* border-block-start: 4px solid var(--red); */
-    color: var(--red);
-}
+
 .hero__nav ul {
     padding: 0;
     display: inline-block;
@@ -151,6 +193,9 @@ nav ul li:hover {
     background-color: var(--black);
     background-repeat: no-repeat;
     background-position-x: right;
+}
+.nuevo-marvel{
+    background-image: url("../resources/img/regalo.jpg");
 }
 .announcement__info {
     clip-path: polygon(0 0, 80% 0%, 100% 100%, 0% 100%);
@@ -194,10 +239,15 @@ nav ul li:hover {
 }
 
 .announcement__list li h4 {
+    color: var(--grey);
+    text-transform: uppercase;
     margin: 0px;
     margin-block-start: 16px;
 }
 .announcement__list li p {
+    font-size: var(--body);
+    color: black;
+    font-weight: bold;
     margin: 0px;
 }
 
@@ -257,6 +307,9 @@ nav ul li:hover {
 }
 
 /* footer */
+footer li:hover{
+    color: var(--grey);
+}
 footer {
     background-color: var(--black);
 }
@@ -282,7 +335,7 @@ footer {
     padding-left: 48px;
 }
 .footer__left-list ul li, .footer__right span{
-
+    transition: 0.1s linear;
     display: block;
     text-transform: uppercase;
     padding-bottom: 16px;
@@ -330,7 +383,7 @@ footer {
 .nav__submenu{
     z-index: 2;
     position: absolute;
-    top: 80px;
+    top: 82px;
     bottom: 0;
     right: 0;
     left: 0;
