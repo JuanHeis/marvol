@@ -1,0 +1,105 @@
+:root {
+    font-family: "Roboto Condensed", sans-serif;
+    --caption: 12px;
+    --black: #202020;
+    --red: #e42831;
+    --grey: #929292;
+    --grey-border: #bbbbbb;
+    --body: 14px;
+    --button: 14px;
+    --body-regular: 16px;
+    --headline: 40px;
+    --subtitle: 26px;
+}
+
+#historietas.historietas {
+    display: none;
+    height: auto;
+    width: 100%;
+    background-color: white;
+  
+}
+
+#historietas {
+    display: block;
+}
+
+/* DEBUG */
+
+/* ToDo : Agregar :target */
+
+#historietas:target+section {
+    display: none;
+}
+
+#historietas:target~main {
+    display: none;
+}
+/* Fin DEBUG */
+
+
+.historietas__hero{
+    background-image: url("../resources/img/historieta-back.jpg");
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.historietas__hero--container {
+    color: white;
+    justify-content: center;
+    height: 568px;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.historietas__hero button {
+    background-color: transparent;
+    max-inline-size: 173px;
+}
+.historietas__body-tittle{
+    margin-block-end: 24px;
+    margin-block-start: 40px;
+}
+
+.historietas__body{
+    display: grid;
+    grid-template-columns: repeat(4, 276px);
+    margin-block-start: 24px;
+    margin-block-end: 40px;
+    column-gap: 32px;
+    row-gap: 48px;
+
+}
+.historieta__card img {
+    box-shadow: 0px 7px 24px rgba(0, 0, 0, 0.25);
+}
+.historieta__card p{
+    font-weight: bold;
+    font-size: 16px;
+}
+.historieta__card p+p{
+    font-weight: normal;
+    color: var(--grey);
+}
+
+@media (max-width: 1200px){
+
+    .historietas__body{ 
+        grid-template-columns: repeat(3, 276px);
+    }
+
+}
+/* 96 */
+@media (max-width: 892px){
+    .historietas__body{ 
+        grid-template-columns: repeat(2, 276px);
+    }
+
+}
+
+@media (max-width: 584px){
+    .historietas__body{ 
+        grid-template-columns: repeat(1, 276px);
+    }
+}
