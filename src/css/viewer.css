@@ -1,0 +1,30 @@
+:root {
+    font-family: "Roboto Condensed", sans-serif;
+    --caption: 12px;
+    --black: #202020;
+    --red: #e42831;
+    --grey: #929292;
+    --grey-border: #bbbbbb;
+    --body: 14px;
+    --button: 14px;
+    --body-regular: 16px;
+    --headline: 40px;
+    --subtitle: 26px;
+}
+
+.historieta-viewer__nav {
+    background-color: var(--black);
+    color: white;
+
+    
+}
+.historieta-viewer__nav-container {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 8px;
+    font-weight: bold;
+    font-size: var(--caption);
+}
+.historieta-viewer__nav-container div{
+    text-transform: uppercase
+}

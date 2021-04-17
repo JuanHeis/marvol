@@ -20,7 +20,7 @@
   
 }
 
-#historietas {
+#historietas:target {
     display: block;
 }
 
