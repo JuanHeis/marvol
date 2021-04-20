@@ -11,7 +11,9 @@
     --headline: 40px;
     --subtitle: 26px;
 }
-
+#historietas{
+    display: none;
+}
 #historietas.historietas {
     display: none;
     height: auto;
@@ -19,16 +21,21 @@
     background-color: white;
   
 }
-
+.historietas {
+    display: none
+}
 #historietas:target {
     display: block;
+}
+#historietas:target~.historietas{
+display: block;    
 }
 
 /* DEBUG */
 
 /* ToDo : Agregar :target */
 
-#historietas:target+section {
+#historietas:target~section {
     display: none;
 }
 
