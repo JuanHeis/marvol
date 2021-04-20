@@ -149,6 +149,13 @@ font-weight: normal;
 #historieta-viewer:target~.historietas{
     display: block;
 }
+#historieta-viewer:target~section {
+    display: none;
+}
+
+#historieta-viewer:target~main {
+    display: none;
+}
 
 @media (max-width: 700px){
     .historieta-viewer__body-container{
