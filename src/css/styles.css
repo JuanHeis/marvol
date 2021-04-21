@@ -3,7 +3,6 @@ html {
     
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
 }
 a:hover {
     color: inherit;
@@ -68,6 +67,9 @@ a {
     padding-inline: 16.5px;
 }
 header {
+    position: sticky;
+    top: 0px;
+    z-index: 10000;
     background-color: var(--black);
 }
 .hero__info h2{
@@ -382,14 +384,15 @@ footer {
 /* Hover menu */
 
 .nav__submenu{
+    overflow: hidden;
     z-index: 2;
-    position: absolute;
     top: 82px;
     bottom: 0;
     right: 0;
     left: 0;
-    transform:translateX(2000px);
+    display: none;
     z-index: 0;
+    cursor: default;
     transition: ease-in-out;
     transition-delay: 0.2s;
     transition-duration: 0.2s;
@@ -397,7 +400,7 @@ footer {
 }
 .nav__submenu-container{
     color: black;
-
+    overflow: hidden;
     background-color: white;
     height: auto;
     padding-block: 40px;
@@ -418,7 +421,7 @@ footer {
 }
 .nav__submenu-container ol li{
     list-style: none;
-    
+    cursor: pointer;
 
 }
 .nav__submenu-container ol span.nav__submenu__span{
@@ -435,17 +438,22 @@ footer {
 .nav__submenu-container ol p.nav__submenu__p:hover{
     color: black;
 }
-.movie-hover:hover > #movies{
-    transform:translate(0);
-    opacity: 1;
-    display: block;
-    z-index: 999;
+#movies:target{
+    transition: ease-in-out;
+    transition-delay: 0.2s;
+    transition-duration: 0.2s;    opacity: 1;
+    position: fixed;
+    
+    display: block;    z-index: 999;
 }
 
-.tv-hover:hover > #tvshow{
-    transform:translate(0);
+#tvshow:target{
+    transition: ease-in-out;
+    transition-delay: 0.2s;
+    transition-duration: 0.2s;
     opacity: 1;
     display: block;
+    position: fixed;
     z-index: 999;
 }
 
