@@ -11,7 +11,16 @@ a {
     text-decoration: none;
     color: inherit;
 }
-
+details[open]{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color:  red;
+}
+nav ul{
+    padding: 0;
+}
 .button--secondary:hover{
     cursor: pointer;
     border-color: var(--grey);
@@ -104,6 +113,7 @@ nav {
 nav ul {
     max-width: 759px;
     margin: auto;
+    padding-inline: 16px;
     display: flex;
     justify-content: space-between;
 }
@@ -189,6 +199,7 @@ nav ul li:hover {
 .announcement {
     height: 750px;
 }
+
 .announcement__background {
     clip-path: polygon(0 0, 100% 0, 100% 543px, 0% 100%);
     background-image: url("../resources/img/first-announcement.png");
@@ -198,7 +209,7 @@ nav ul li:hover {
     background-position-x: right;
 }
 .nuevo-marvel{
-    background-image: url("../resources/img/regalo.jpg");
+    background-image: url("../resources/img/regalo.png");
 }
 .announcement__info {
     clip-path: polygon(0 0, 80% 0%, 100% 100%, 0% 100%);
@@ -224,6 +235,7 @@ nav ul li:hover {
     font-size: var(--body-regular);
 }
 .announcement__list {
+    overflow-x: scroll;
     margin: auto;
     position: relative;
     display: flex;
@@ -256,8 +268,12 @@ nav ul li:hover {
 
 /* News */
 
+.news-list article img{
+   max-width: 100%;
+}
 .news-list article {
     max-width: 949px;
+    display: flex;
 }
 .news-list hr {
     margin-inline: 0;
@@ -286,6 +302,10 @@ nav ul li:hover {
 }
 
 /* credit */
+.marvol-credit img{
+    max-width: 683px;
+    
+}
 .marvol-credit {
     margin-top: 54px;
     justify-content: center;

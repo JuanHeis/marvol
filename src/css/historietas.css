@@ -76,7 +76,11 @@ display: block;
     margin-block-end: 40px;
     column-gap: 32px;
     row-gap: 48px;
-
+    justify-content: center;
+}
+.historieta__card{
+    justify-self: center;
+    align-self: center;
 }
 .historieta__card img {
     box-shadow: 0px 7px 24px rgba(0, 0, 0, 0.25);
