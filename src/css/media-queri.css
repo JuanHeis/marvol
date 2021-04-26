@@ -31,6 +31,44 @@
     header nav {
         display: none;
     }
+    .header__logo details{
+        display: block;
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        color: whitesmoke;
+
+    }
+    #movies:target{
+        display: block;
+        z-index: 1000;
+    }
+    header{
+        height: 64px;
+        
+    }
+    summary::marker{
+        content: "";
+        
+    }
+    details[open] > summary::marker {
+        content: '';
+    } 
+    details ul{
+        background-color: #202020;
+        margin: 0;
+        padding: 0;
+        height: 75vh;
+    }details ul li{
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight:bold;
+        padding: 16px;
+        list-style: none;
+    }
+    .header__logo details summary{
+        padding: 16px;
+    }
     header .button--header {
         display: none;
     }
@@ -38,6 +76,8 @@
         display: none;
     }
     .header__logo {
+        padding-block: 12px;
+    align-content: center;
         justify-content: center;
     }
     .news-list article .news__image-container{
